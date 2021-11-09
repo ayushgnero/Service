@@ -1,0 +1,13 @@
+.form-wrap {
+  margin-top: 2%;
+  margin-left: 25%;
+  height: 85vh;
+  background-color: rgb(226, 222, 219);
+  width:50% ;
+  min-width: 320px;
+  padding: 10px;
+  border: 1px solid;
+  margin-right: 20px;
+  border-radius: 10px;
+  overflow: auto;
+}

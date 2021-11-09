@@ -1,0 +1,302 @@
+
+.flex-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #DECBB1;
+    margin: 0 auto;
+    display: -webkit-flex; /* Safari */
+    display: flex; /* Standard syntax */
+}
+.flex-container1{
+    width: 100%;
+    height: 90vh;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: -webkit-flex; /* Safari */
+    display: flex; /* Standard syntax */
+}
+.chart2{
+  width: 30%;
+  margin-left: 6%;
+  margin-top: 3%;
+  float:left
+}
+.column{
+  background-color: #B69B7D;
+  width: 75vh;
+  z-index: 0;
+}
+.column1{
+  background-color: #DECBB1;
+  z-index: 0;
+}
+.logo{
+  position: absolute;
+  height: 25vh;
+  width: 35vh;
+  left:22.7%;
+  top:34%;
+  background-image: url(./image/logo.png);
+  background-size: cover;
+
+}
+.div-front{
+  width:170vh;
+  left: 4%;
+  top:5%;
+  height: 90vh;
+  position:absolute;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.leftlogin{
+  background-image: url(./image/leftBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 30px;
+  width: 75vh;
+}
+.schoolname{
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 300;
+  position: absolute;
+  font-size: 4vh;
+  color: #fff;
+  left:28%;
+  top:60%;
+}
+.line-1 {
+  height: 2px;
+  width: 550px;
+  background: white;
+  position: absolute;
+  left:8%;
+  top:67%;
+  opacity: 30%;
+}
+.cityname{
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 100;
+  position: absolute;
+  font-size: 4vh;
+  color: #fff;
+  left:24.8%;
+  top:60%;
+}
+.formlogin1{
+  height:4.2vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  position: absolute;
+  top:49%;
+  color: #8F614B;
+  font-size: 1.7vh;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.formlogin2{
+  height:3.7vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  position: absolute;
+  top:30%;
+  color: #8F614B;
+  font-size: 1.7vh;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.formlogin3{
+  height:3.7vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  position: absolute;
+  top:35%;
+  color: #8F614B;
+  font-size: 1.7vh;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.formlogin4{
+  height:3.7vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  position: absolute;
+  top:25%;
+  color: #8F614B;
+  font-size: 1.7vh;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.formlogin{
+  height:4.2vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  font-size: 1.7vh;
+  position: absolute;
+  color: #8F614B;
+  top:42%;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.formloginfgt{
+  height:3.7vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:40vh;
+  font-size: 1.7vh;
+  position: absolute;
+  color: #8F614B;
+  top:48%;
+  left:53%;
+  padding-left: 1.3%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+.statename{
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
+  position: absolute;
+  font-size: 4vh;
+  color: #fff;
+  left:15.5%;
+  top:66%;
+}
+.para{
+  font-family: 'IBM Plex Serif', serif;
+  color: #B69B7D;
+  width:40vh;
+  margin-left:41%;
+  margin-top: 85%;
+}
+.para1{
+  font-family: 'IBM Plex Serif', serif;
+  color: #B69B7D;
+  width:40vh;
+  margin-left:41%;
+  margin-top: 97%;
+}
+.login {
+  height:4.5vh;
+  font-family: 'IBM Plex Serif', serif;
+  width:20vh;
+  background-color: #8F614B;
+  font-size: 1.7vh;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  top:56%;
+  left:53%;
+  border: 2px #8F614B solid;
+  border-radius: 35px;
+}
+
+.login:hover {
+    animation-name: background-color;
+    animation-duration: 1500ms;
+    }
+
+    @keyframes background-color {
+        100% {
+        background-color:#070502;
+    }
+}
+
+.login:focus {
+  outline: 0.05em dashed #ff6600; 
+  outline-offset: 0.05em;
+}
+
+.login::after {
+  content: '';
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  position: absolute;
+  left: calc(50% - 0.75em);
+  top: calc(50% - 0.75em);
+  border: 0.15em solid transparent;
+  border-right-color: white;
+  border-radius: 50%;
+  animation: button-anim 0.7s linear infinite;
+  opacity: 0;
+}
+
+@keyframes button-anim {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login.loading {
+  color: transparent;
+}
+
+.login.loading::after {
+  opacity: 1;
+}
+
+/* em values are used to adjust button values such as padding, radius etc. based on font-size */
+.fgtpass{
+  color: #8F614B;
+  margin-left:-14%;
+  margin-top:48%;
+  text-decoration: none;
+}
+ /* The snackbar - position it at the bottom and in the middle of the screen */
+ #snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 15px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+} 

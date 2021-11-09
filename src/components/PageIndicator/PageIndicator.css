@@ -1,0 +1,24 @@
+
+.Status{
+  background: #382A1D;
+  width:100%;
+  pointer-events: none;
+  margin-top: -0.5%;
+  color:#fff;
+  height:50px;
+  line-height: 90%;
+  font-size:0.5rem;
+}
+.StatusText
+{
+  padding-top: 0.7%;
+  font-size: 2vh;
+}
+h1{
+  margin-left: 5%;
+  padding-top: 0.3%;
+}
+h3
+{
+  margin-left: 5%;
+}
