@@ -2,25 +2,25 @@ export const DashboardItems = [
   {
     sno:1,
     title: 'Create Assessments',
-    url: '/SignUp',
+    url: 'SignUp',
     cName:'nav-links'
   },
   {
     sno:2,
     title: 'Review Assessments',
-    url: '/results',
+    url: 'results',
     cName:'nav-links'
   },
   {
     sno:4,
     title: 'Class History',
-    url: '/leaderboards',
+    url: 'leaderboards',
     cName:'nav-links'
   },
   {
     sno:6,
     title: 'Profile',
-    url: '/UserProfileTeacher',
+    url: 'UserProfileTeacher',
     cName:'nav-links'
   },
 ]
