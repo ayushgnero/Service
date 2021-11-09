@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "@popperjs/core": "^2.10.2",
+    "@rjsf/bootstrap-4": "^3.2.0",
+    "@rjsf/core": "^3.2.0",
+    "@rjsf/material-ui": "^3.2.0",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
@@ -29,8 +33,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scrollbars-custom": "^4.0.27",
-    "web-vitals": "^0.2.4",
-    "webpack": "^4.44.2"
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
