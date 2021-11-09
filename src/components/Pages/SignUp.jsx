@@ -163,7 +163,7 @@ export default function App() {
   };
   const handleSubmit=(formData)=>{
     console.log(formData.formData);
-    axios.post('http://localhost:4000/questionupload', formData.formData)
+    axios.post('https://xenoclass.herokuapp.com/questionupload', formData.formData)
     .then(response => console.log(response.data))
   }
   return (

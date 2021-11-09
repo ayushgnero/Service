@@ -100,7 +100,7 @@ class bulkuser extends React.Component
         city: this.state.city,
         bitrthdate: this.state.bitrthdate,
       }
-      axios.post('http://localhost:4000/Register', registered)
+      axios.post('https://xenoclass.herokuapp.com/Register', registered)
       .then((res) => {
         this.state.error = res.data.message;
         console.log(this.state.error,res.data.message);

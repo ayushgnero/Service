@@ -100,7 +100,7 @@ class question extends Component{
           subject:this.state.course_id,
           marks: this.state.marks
         }
-        axios.post('http://localhost:4000/append',marks)
+        axios.post('https://xenoclass.herokuapp.com/append',marks)
         .then((res) => {
               console.log("uploaded");
           })

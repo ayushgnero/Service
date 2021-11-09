@@ -34,7 +34,7 @@ class resource extends React.Component
         </div>
       <div className ="mainBody">
         <div className="grid-container1">
-        <form ref='uploadForm' id='uploadForm' action='http://localhost:4000/upload' method='post' encType="multipart/form-data">
+        <form ref='uploadForm' id='uploadForm' action='https://xenoclass.herokuapp.com/upload' method='post' encType="multipart/form-data">
               
               <input ref={(input) => { this.inpuElement = input;}} onChange={this.elementChange} className="inputfile" name="sampleFile" id="file" type="file" accept=".png"/>
               <label className ="b5" for="file">Choose a file</label>

@@ -134,7 +134,7 @@ const Dropzone = () => {
             const formData = new FormData();
             formData.append('excel', validFiles[i]);
 
-            axios.post('http://localhost:4000/upload', formData,{headers: {'Content-Type': 'multipart/form-data' }
+            axios.post('https://xenoclass.herokuapp.com/upload', formData,{headers: {'Content-Type': 'multipart/form-data' }
 }, {
                 onUploadProgress: (progressEvent) => {
                     const uploadPercentage = Math.floor((progressEvent.loaded / progressEvent.total) * 100);
