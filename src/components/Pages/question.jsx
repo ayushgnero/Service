@@ -118,14 +118,8 @@ class question extends Component{
       componentDidMount() {
       
        let x = document.getElementById(1);
-       console.log(x);
        x.style.backgroundColor = '#048998';
        x.style.color = "#f6f5f5";
-       const {startCount} = this.props
-        this.setState({
-          count: this.state.a.duration
-        })
-        this.doIntervalChange()
        this.setState((state)=>
      {
        let i =0;
@@ -265,7 +259,16 @@ class question extends Component{
           }
         });
       }
-      
+      componentDidMount () {
+        let x = document.getElementById(1);
+        x.style.backgroundColor = '#048998';
+        x.style.color = "#f6f5f5";
+        const {startCount} = this.props
+        this.setState({
+          count: this.state.a.duration
+        })
+        this.doIntervalChange()
+      }
 
       doIntervalChange = () => {
         const {count} = this.state
