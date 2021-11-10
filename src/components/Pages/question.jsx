@@ -118,6 +118,7 @@ class question extends Component{
       componentDidMount() {
       
        let x = document.getElementById(0);
+       console.log(x);
        x.style.backgroundColor = '#048998';
        x.style.color = "#f6f5f5";
        const {startCount} = this.props
