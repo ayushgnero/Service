@@ -117,7 +117,7 @@ class question extends Component{
 
       componentDidMount() {
       
-       let x = document.getElementById(0);
+       let x = document.getElementById(1);
        console.log(x);
        x.style.backgroundColor = '#048998';
        x.style.color = "#f6f5f5";
