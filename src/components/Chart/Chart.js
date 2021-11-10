@@ -32,7 +32,7 @@ class Chart extends Component{
               yAxes: [{
                   ticks: {
                       beginAtZero: true,
-                      suggestedMax: 100
+                      suggestedMax: 15
                   }
               }]
           }

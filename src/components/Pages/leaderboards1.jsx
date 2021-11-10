@@ -16,7 +16,9 @@ class leaderboards1 extends Component{
       temp:100,
       set:[],
       avg:0,
+      times:[],
       markssubavg:[],
+      qno:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
       i:0,
       marks:[],
       j:leaderboard,
@@ -44,8 +46,7 @@ class leaderboards1 extends Component{
             label:'Results',
             data:[
               leaderboard[0].marks,
-              questions["no_of_questions"]-leaderboard[0].marks,
-              0
+              questions["no_of_questions"]-leaderboard[0].marks
             ],
             backgroundColor:[
               'rgba(54, 255, 54, 0.9)',
@@ -76,15 +77,28 @@ class leaderboards1 extends Component{
     })
   }
   renderTableData() {
-      return this.state.z.map((table, index) => {
-         const { sno, time} = table //destructuring
-         return (
-            <tr key={sno}>
-               <td>{sno}</td>
-               <td>{time}</td>
-            </tr>
-         )
+      var j = JSON.parse(sessionStorage.getItem("qt"));
+      return j.map((index ,key) =>{
+        return (
+                <tr key={index}>
+                  
+                  <td>{key+1}</td>
+                   <td>{index}</td>
+                </tr>
+             )
       })
+      // return this.state.z.map((table, index) => {
+      //   console.log(this.state.z);
+      //    const { sno, time} = table //destructuring
+      //    this.state.times[index] = time;
+      //    return (
+      //       <tr key={sno}>
+      //          <td>{sno}</td>
+      //          <td>{JSON.parse(sessionStorage.getItem("qt"))}</td>
+      //       </tr>
+      //    )
+      // })
+
    }
   sort() {
     let i = 0;
@@ -175,6 +189,7 @@ class leaderboards1 extends Component{
   this.state.markssubavg = markssubavg;
   let k = leaderboard;
   let m = questions["topic"][0].questions;
+  console.log (this.state.times);
     return(
       <div>
         <Navbar/>
@@ -185,37 +200,17 @@ class leaderboards1 extends Component{
           <Line
           data={
             {
-              labels: sets1,
+              labels: this.state.qno,
               datasets: [
                 {
-                  label: sets[0],
-                  data: marksub[0][0],
+                  label: "Time per Question",
+                  data: JSON.parse(sessionStorage.getItem("qt")),
                   fill: false,
                   backgroundColor: 'rgb(198,213,126)',
                   borderColor: 'rgb(198,213,126)',
-                },
-                {
-                  label: sets[1],
-                  data: marksub[1][0],
-                  fill: false,
-                  backgroundColor: 'rgb(213, 126, 126)',
-                  borderColor: 'rgb(213, 126, 126)',
-                },
-                {
-                  label: sets[2],
-                  data: marksub[2][0],
-                  fill: false,
-                  backgroundColor: 'rgb(246,215,167)',
-                  borderColor: 'rgb(246,215,167)',
-                },
-                {
-                  label: sets[3],
-                  data: marksub[3][0],
-                  fill: false,
-                  backgroundColor: 'rgb(135,170,170)',
-                  borderColor: 'rgb(135,170,170)',
-                },
-              ],
+                }
+                
+              ]
             }
           }
           height={200}
@@ -223,12 +218,16 @@ class leaderboards1 extends Component{
           options={{
             maintainAspectRatio:false,
             scales: {
+              
               yAxes: [{
                 ticks: {
-                    beginAtZero: true,
-                    suggestedMax: 100
-                }
-            }]
+                    beginAtZero: true
+                    
+                },
+            },
+            
+            
+          ]
               }
           }}
         />
@@ -258,7 +257,7 @@ class leaderboards1 extends Component{
                   {this.renderTableData()}
                </tbody>
               </table>
-              </Scrollbar>S
+              </Scrollbar>
             </div>
           </div>
       </div>

@@ -35,6 +35,7 @@ class demotest extends Component{
       textAlign: 'center', // Centered horizontally
       flex:1
     };
+    sessionStorage.setItem("time",1800);
     return(
       <div>
         <div className = "Status">

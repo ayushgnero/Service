@@ -75,6 +75,7 @@ class question extends Component{
       HandelAnswer =(index)=>{
         this.state.answer[this.state.i-1] = this.state.k[this.state.i-1].option[index];
         this.state.answer1[this.state.i-1] = index+1;
+        this.nextClick();
         // console.log(index);
         // if(this.state.k[this.state.i-1].option[index].isCorrect){
         //   this.state.marks = this.state.marks+1;
@@ -261,8 +262,8 @@ class question extends Component{
       }
       componentDidMount () {
         let x = document.getElementById(1);
-        x.style.backgroundColor = '#048998';
-        x.style.color = "#f6f5f5";
+       x.style.backgroundColor = '#048998';
+       x.style.color = "#f6f5f5";
         const {startCount} = this.props
         this.setState({
           count: this.state.a.duration
@@ -271,28 +272,33 @@ class question extends Component{
       }
 
       doIntervalChange = () => {
-        const {count} = this.state
+        let count2 =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
           this.myInterval = setInterval(() => {
-          this.setState(prevState => ({
-            count: prevState.count - 1
-          }))
-          let mm = Math.floor(this.state.count/60);
-          let ss = this.state.count % 60;
+            this.setState(prevState => ({
+              count: sessionStorage.getItem("time") - 1
+            }))
+            var count = sessionStorage.getItem("time") -1
+            sessionStorage.setItem("time",count);
+            sessionStorage.setItem("qt",JSON.stringify(count2));
+            // sessionStorage.setItem("qt",count2[0]+1);
+            count2[this.state.i-1]+=1
+            console.log(sessionStorage.getItem("qt"));
+            let mm = Math.floor(count/60);
+          let ss = count % 60;
           document.getElementById("timer").innerHTML = `${mm}:${ss}`;
-          if (this.state.count === 0)
+          if (sessionStorage.getItem("time") === 0)
           {
             this.Submit();
           }
-          this.state.k[this.state.i - 1].time += 1;
         }, 1000)
+        
       }
       componentWillUnmount () {
         clearInterval(this.myInterval)
       }
     render()
     {
-      console.log(questions["topic"][0].questions);
-      console.log("mongo",JSON.parse(sessionStorage.getItem("test"))[0].topic[0].questions);
+      
       let temp = questions;
       let temp2 = leaderboard;
       let item = this.state.j;
@@ -359,8 +365,8 @@ class question extends Component{
                 </div>
 
               </div>
-              <button className ="b3" onClick={this.nextClick}>Next Question</button>
-              <button className ="b3" onClick={this.prevClick}>Prev Question</button>
+              {/* <button className ="b3" onClick={this.nextClick}>Next Question</button>
+              <button className ="b3" onClick={this.prevClick}>Prev Question</button> */}
               <button className ="b3" onClick={this.Submit}>Submit</button>
             </div>
           </div>
