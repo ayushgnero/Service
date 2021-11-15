@@ -64,7 +64,7 @@ class leaderboards extends Component{
             <tr key={sno}>
               
                <td>{this.state.set[index]}</td>
-               <td>{this.state.markssubavg[index]}</td>
+               <td>{Math.floor(this.state.markssubavg[index])}</td>
             </tr>
          )
       })
